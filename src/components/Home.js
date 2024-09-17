@@ -15,7 +15,7 @@ const Home = () => {
           <div className="description">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur iure saepe nihil molestiae praesentium rerum nesciunt reiciendis minima? Eos cumque laboriosam nostrum rem libero consequuntur ab non? Expedita, aperiam necessitatibus!
           </div>
-          <a href="/cv.pdf" target='_blank' rel='noreferrer noopener'>Download My CV</a>
+          <a href={`${process.env.PUBLIC_URL}//cv.pdf`} target='_blank' rel='noreferrer noopener'>Download My CV</a>
         </div>
         <div className="avatar">
           <div className="card">

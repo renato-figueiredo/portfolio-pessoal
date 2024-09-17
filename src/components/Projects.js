@@ -46,7 +46,7 @@ const Projects = () => {
             listProjects.map((value, key) => (
               <div key={key} className='item'>
                 <div className="images" ref={(el) => el && refDivs.current.push(el)}>
-                  <img src={value.images} alt="" />
+                  <img src={`${process.env.PUBLIC_URL}/${value.images}`} alt="" />
                 </div>
                 <div className="content" ref={(el) => el && refDivs.current.push(el)}>
                   <h3>{value.name}</h3>
