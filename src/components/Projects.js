@@ -2,6 +2,8 @@ import React, { useState, useRef } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPersonCircleQuestion, faEarthAmericas } from '@fortawesome/free-solid-svg-icons';
 import CustomHook from './CustomHook';
+import project1 from '../static/media/project1.jpg';
+import project2 from '../static/media/project2.jpg';
 
 const Projects = () => {
   const [listProjects] = useState([
@@ -10,21 +12,21 @@ const Projects = () => {
       description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio.',
       mission: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio.',
       language: 'HTML, CSS, JavaScript',
-      images: '/project1.jpg',
+      images: project1,
     },
     {
       name: 'Portfolio',
       description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio.',
       mission: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio.',
       language: 'HTML, CSS, JavaScript',
-      images: '/project2.jpg',
+      images: project2,
     },
     {
       name: 'Portfolio',
       description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio.',
       mission: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio.',
       language: 'HTML, CSS, JavaScript',
-      images: '/project1.jpg',
+      images: project1,
     },
   ])
 
@@ -46,7 +48,7 @@ const Projects = () => {
             listProjects.map((value, key) => (
               <div key={key} className='item'>
                 <div className="images" ref={(el) => el && refDivs.current.push(el)}>
-                  <img src={`${process.env.PUBLIC_URL}/${value.images}`} alt="" />
+                  <img src={value.images} alt="" />
                 </div>
                 <div className="content" ref={(el) => el && refDivs.current.push(el)}>
                   <h3>{value.name}</h3>
