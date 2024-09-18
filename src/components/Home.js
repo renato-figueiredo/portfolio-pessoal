@@ -20,7 +20,7 @@ const Home = () => {
           Sou um eterno estudante de tecnologia, com uma paixão por descobrir e aplicar as mais recentes inovações. Estou sempre explorando novos aspectos da tecnologia e como ela pode ser utilizada de formas interessantes e impactantes.
           </div>
           <div className='social'>
-            <a href={cv} target='_blank' rel='noreferrer noopener'>Download My CV</a>
+            <a href={cv} target='_blank' rel='noreferrer noopener'>Download CV</a>
             <a  href="https://github.com/renato-figueiredo"><FontAwesomeIcon className='icon' icon={faGithub} /></a>
             <a href="https://www.linkedin.com/in/renato-figueiredo-alves/"><FontAwesomeIcon className='icon' icon={faLinkedinIn} /></a>
           </div>
