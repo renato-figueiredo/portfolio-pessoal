@@ -1,9 +1,9 @@
 import React, { useRef } from 'react';
 import CustomHook from './CustomHook';
-import avatar from '../static/media/avatar.jpg';
+import avatar from '../static/media/avatar.webp';
 import cv from '../static/media/cv.pdf';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBrand, faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
+import { faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 
 
 const Home = () => {
