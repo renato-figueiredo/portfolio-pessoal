@@ -22,7 +22,7 @@ const Home = () => {
           <div className='social'>
             <a href={cv} target='_blank' rel='noreferrer noopener'>Download My CV</a>
             <a  href="https://github.com/renato-figueiredo"><FontAwesomeIcon className='icon' icon={faGithub} /></a>
-            <a href="https://github.com/renato-figueiredo"><FontAwesomeIcon className='icon' icon={faLinkedinIn} /></a>
+            <a href="https://www.linkedin.com/in/renato-figueiredo-alves/"><FontAwesomeIcon className='icon' icon={faLinkedinIn} /></a>
           </div>
         </div>
         <div className="avatar">

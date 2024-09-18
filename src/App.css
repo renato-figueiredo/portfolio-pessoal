@@ -58,9 +58,18 @@ header{
     font-size: 1.5em;
     font-weight: bold;
     color: #eee;
+    cursor: pointer;
+    transition: 0.5s;
     & span{
       color: #e945e3;
       text-shadow: 0 0 5px #7a43b6;
+      transition: 0.5s;
+    }
+    &:hover{
+      text-shadow: 0 0 20px #7a43b6;
+      & span{
+        text-shadow: 0 0 20px #7a43b6;
+      }
     }
   }
   & nav{
@@ -68,6 +77,11 @@ header{
     gap: 30px;
     & span{
       cursor: pointer;
+      transition: 0.5s;
+      &:hover{
+        text-shadow: 0 0 15px #7a43b6;
+        transform: translateY(-5px);
+      }
       &.active{
         color: #e945e3;
         text-shadow: 0 0 5px #7a43b6;
@@ -76,7 +90,8 @@ header{
   }
 }
 
-/* home */
+/* main */
+
 section{
   width: min(1300px, 100%);
   margin: auto;

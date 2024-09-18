@@ -35,9 +35,16 @@ const NavBar = ({activeTab}) => {
     setStatusNav(statusNav === 'active' ? null : 'active');
   }
 
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth', // Rolagem suave
+    });
+  };
+
   return (
     <header>
-      <div className='logo'>
+      <div className='logo' onClick={() => scrollToTop()}>
       {/* <img src="/logo192.png" alt="" /> */}
       Renato<span>.dev</span>
       </div>
