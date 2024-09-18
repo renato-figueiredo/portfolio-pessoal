@@ -507,6 +507,16 @@ section{
             & h3{
               font-size: 1.2em;
             }
+            & .links{
+              gap: 0;
+              justify-content: space-evenly;
+              & a{
+                font-size: small;
+                &:nth-child(2) svg{
+                  font-size: 2em;
+                }
+              }
+            }
           }
           &:nth-child(2n){
             & .content, .images{
