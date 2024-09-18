@@ -1,40 +1,43 @@
 import React, { useState, useRef } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faReact, faHtml5, faCss3, faJs, faVuejs, faLaravel } from '@fortawesome/free-brands-svg-icons';
+import { faReact, faHtml5, faCss3, faJs, faPython, faBootstrap, faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faEarthAmericas, faCodeBranch, faBrain, faRobot } from '@fortawesome/free-solid-svg-icons';
 import CustomHook from './CustomHook';
+
+
 
 
 const Skills = () => {
   const [listSkills] = useState([
     {
-      name: 'React',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio.',
-      icon: faReact
+      name: 'Estrutura e Estilização',
+      description: 'HTML5, CSS3 e JavaScript',
+      icon: [faHtml5, faCss3, faJs]
     },
     {
-      name: 'HTML5',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio.',
-      icon: faHtml5
+      name: 'Frameworks e Bibliotecas',
+      description: 'React e Bootstrap',
+      icon: [faReact, faBootstrap]
     },
     {
-      name: 'CSS3',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio.',
-      icon: faCss3
+      name: 'Linguagens',
+      description: 'Python e Javascript',
+      icon: [faJs, faPython]
     },
     {
-      name: 'JavaScript',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio.',
-      icon: faJs
+      name: 'Versionamento',
+      description: 'Git e GitHub',
+      icon: [faCodeBranch, faGithub]
     },
     {
-      name: 'VueJS',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio.',
-      icon: faVuejs
+      name: 'Automação e LLMs',
+      description: 'Python, Llama, OpenAI e Gemini ',
+      icon: [faRobot, faBrain]
     },
     {
-      name: 'Laravel',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio.',
-      icon: faLaravel
+      name: 'Linguas Estrangeiras',
+      description: 'Inglês: intermediário - Espanhol: básico',
+      icon: [faEarthAmericas]
     },
   ])
 
@@ -46,16 +49,20 @@ const Skills = () => {
     <div>
       <section className="skills" ref={refTab}>
         <div className="title" ref={(el) => el && refDivs.current.push(el)}>
-          This is my Skills
+          Minhas Habilidades
         </div>
         <div className="description" ref={(el) => el && refDivs.current.push(el)}>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam molestiae ex, consequatur unde corporis sunt veniam dolorum aut illum perspiciatis tempore cupiditate veritatis voluptatem! Error, reprehenderit. Porro odit quae nemo.
+        Um resumo das principais ferramentas e tecnologias que utilizo para criar soluções criativas e eficientes.
         </div>
         <div className="list" ref={(el) => el && refDivs.current.push(el)}>
           {
             listSkills.map((value, key) => (
               <div key={key} className='item'>
-                <FontAwesomeIcon icon={value.icon} />
+                {
+                  value.icon.map((icon, key) => (
+                    <FontAwesomeIcon key={key} icon={icon} />
+                  ))
+                }
                 <h3>{value.name}</h3>
                 <div className="description">{value.description}</div>
               </div>
