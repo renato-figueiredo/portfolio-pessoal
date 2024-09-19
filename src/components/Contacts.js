@@ -1,34 +1,65 @@
 import React, { useRef, useState } from 'react';
 import CustomHook from './CustomHook';
+import useCopyToClipboard from './useCopyToClipboard';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEnvelope, faThumbsUp, faCopy  } from '@fortawesome/free-solid-svg-icons';
+import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
+
 
 
 const Contacts = () => {
   const [listContacts] = useState([
     {
       title: 'Email',
-      value: 'renatofigueiredoalves@gmail.com'
+      link: 'mailto:renatofigueiredoalves@gmail.com',
+      text: 'renatofigueiredoalves@gmail.com',
+      icon: faEnvelope,
+      copy: true,
     },
     {
       title: 'Telefone',
-      value: '+5531983328810'
+      link: 'https://api.whatsapp.com/send?phone=5531983328810', //Trocar para link do wpp
+      text: '+55 (31) 9 8332-8810',
+      icon: faWhatsapp,
+      copy: false,
     }
   ]);
+
+  const [isCopied, copyToClipboard] = useCopyToClipboard();
+
   const refTab = useRef();
   const divs = useRef([]);
   CustomHook(refTab, divs);
+
   return (
     <div>
       <section className="contacts" ref={refTab}>
-        <div className="title" ref={(el) => el && divs.current.push(el)}>This is my Contacts</div>
+        <div className="title" ref={(el) => el && divs.current.push(el)}>Contatos</div>
         <div className="description" ref={(el) => el && divs.current.push(el)}>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam ducimus dolor amet necessitatibus consectetur iure neque vel, repellat mollitia iusto cumque similique sit numquam fugiat dolorem repudiandae quis fugit facere.
+        Sinta-se à vontade para entrar em contato caso queira discutir um projeto, obter mais informações ou explorar oportunidades de trabalho.
         </div>
         <div className="list" ref={(el) => el && divs.current.push(el)}>
           {
             listContacts.map((value, key) => (
               <div key={key} className="item">
+
                 <h3>{value.title}</h3>
-                <div>{value.value}</div>
+
+                <div className="info">
+                  <div>{value.text}</div>
+                  <div>
+                  <a href={value.link} rel=''>
+                    <FontAwesomeIcon icon={value.icon} />
+                  </a>
+
+                  {
+                  value.copy && <div onClick={() => copyToClipboard(value.text)}>
+                    {isCopied ? <FontAwesomeIcon icon={faThumbsUp} /> : <FontAwesomeIcon icon={faCopy} />}
+                  </div>
+                  }
+                  </div>
+                </div>
+
               </div>
             ))
           }
