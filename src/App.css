@@ -531,6 +531,12 @@ section{
       & .list{
         & .item{
           grid-template-columns: 1fr;
+          & .images{
+            & img{
+              max-height: 300px;
+              /* object-fit: cover; */
+            }
+          }
           & .content{
             & h3{
               font-size: 1.2em;
