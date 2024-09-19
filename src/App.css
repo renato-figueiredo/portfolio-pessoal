@@ -261,7 +261,7 @@ section{
 
   &.projects{
     & .title{
-      font-size: 5vw;
+      font-size: 3em;
       text-align: center;
       font-family: 'MuseoModerno', system-ui;
       margin-top: 100px;
@@ -424,7 +424,7 @@ section{
   &.contacts{
     padding-bottom: 220px;
     & .title{
-      font-size: 5vw;
+      font-size: 3em;
       text-align: center;
       font-family: 'MuseoModerno', system-ui;
     }
