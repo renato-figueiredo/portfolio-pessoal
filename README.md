@@ -1,70 +1,78 @@
-# Getting Started with Create React App
+# Portfólio Pessoal
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactjs.org/)
+[![Bootstrap](https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white)](https://getbootstrap.com/)
+[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+[![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5)
+[![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
+[![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-222222?style=for-the-badge&logo=github&logoColor=white)](https://pages.github.com/)
 
-## Available Scripts
+[![Acessar o site](https://img.shields.io/badge/Acessar%20o%20site-00B5E2?style=for-the-badge)](https://renato-figueiredo.github.io/portfolio-pessoal/)
 
-In the project directory, you can run:
+## Capturas de Tela
 
-### `npm start`
+![Home](https://github.com/renato-figueiredo/portfolio-pessoal/blob/main/src/static/media/home.png?raw=true)
+![Habilidades](https://github.com/renato-figueiredo/portfolio-pessoal/blob/main/src/static/media/skills.png?raw=true)
+![Contatos](https://github.com/renato-figueiredo/portfolio-pessoal/blob/main/src/static/media/contacts.png?raw=true)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Sobre o Projeto
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Este é um portfólio pessoal desenvolvido com **React**, **Bootstrap**, **JavaScript**, **HTML5** e **CSS3**, hospedado no **GitHub Pages**. O objetivo deste projeto é apresentar minhas habilidades como desenvolvedor front-end e fornecer um local onde eu possa compartilhar meus projetos e informações de contato.
 
-### `npm test`
+## Como Executar o Projeto
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Para rodar o projeto, siga os passos abaixo:
 
-### `npm run build`
+### 1. Instalar as dependências
+```bash
+npm install
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 2. Rodar o projeto no modo de desenvolvimento
+```bash
+npm start
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Isso irá iniciar o servidor de desenvolvimento e abrir o site no navegador.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Estrutura do Projeto
 
-### `npm run eject`
+O projeto está organizado da seguinte maneira:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```bash
+src/
+├── components/
+│   ├── Contacts.js            # Componente da seção de contato
+│   ├── CustomHook.js          # Hook customizado para funcionalidades específicas
+│   ├── Home.js                # Componente da página inicial
+│   ├── NavBar.js              # Componente de navegação (header)
+│   ├── Projects.js            # Componente que lista os projetos
+│   ├── Skills.js              # Componente para mostrar habilidades
+│   └── useCopyToClipboard.js  # Hook para copiar texto para a área de transferência
+├── redux/
+│   ├── action.js              # Ações do Redux para gerenciar estados
+│   ├── reducer.js             # Redutores do Redux
+│   └── store.js               # Configuração da store do Redux
+├── static/
+│   └── media/                 # Arquivos estáticos
+│       ├── avatar.webp        # Imagem Pessoal
+│       ├── cv.pdf             # Currículo em PDF
+│       ├── project-IA.webp    # Imagem do projeto gerada por IA
+│       └── project-mgpocket.webp  # Imagem do projeto MG Pocket
+├── App.css                    # Arquivo CSS principal
+└── App.js                     # Componente principal do React
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Comandos Úteis
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Criar o build do projeto para produção
+```bash
+npm run build
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Fazer deploy no GitHub Pages
+```bash
+npm run deploy
+```
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Esse projeto utiliza **React** para o front-end e **Redux** para gerenciamento de estado.
