@@ -11,9 +11,10 @@
 
 ## Capturas de Tela
 
-![Home](https://github.com/renato-figueiredo/portfolio-pessoal/blob/main/src/static/media/home.png?raw=true)
-![Habilidades](https://github.com/renato-figueiredo/portfolio-pessoal/blob/main/src/static/media/skills.png?raw=true)
-![Contatos](https://github.com/renato-figueiredo/portfolio-pessoal/blob/main/src/static/media/contacts.png?raw=true)
+![Home](./src/static/media/portfolio-home.webp)
+![Habilidades](./src/static/media/portfolio-skills.webp)
+![Projetos](./src/static/media/portfolio-projects.webp)
+![Contatos](./src/static/media/portfolio-contacts.webp)
 
 ## Sobre o Projeto
 
